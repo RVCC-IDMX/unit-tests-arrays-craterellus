@@ -41,7 +41,13 @@
  * @returns {string} - the character at the index
  */
 function findTheCharacterAtIndex(str, indx) {
-  // write your code here & return value
+  // turn string into an array
+  // find index 0
+  // if that isn't a string, make it one
+  // send it back
+  const myArray = [...str];
+  const beepbeep = myArray[indx];
+  return beepbeep;
 }
 
 /**
@@ -52,7 +58,8 @@ function findTheCharacterAtIndex(str, indx) {
  * @returns {string} - the sliced string
  */
 function sliceTheString(str, start, end) {
-  // write your code here & return value
+  const sliced = str.slice(start, end);
+  return sliced;
 }
 
 /**
@@ -62,7 +69,8 @@ function sliceTheString(str, start, end) {
  * @returns {array} - the array of substrings
  */
 function splitTheString(str, separator) {
-  // write your code here & return value
+  const arr = str.split(' ');
+  return arr;
 }
 
 /**
