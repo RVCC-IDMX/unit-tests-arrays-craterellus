@@ -16,7 +16,10 @@
  * ? hint: use Math.abs() to get the absolute value of a number
  */
 function getAbsoluteSum(nums) {
-  // write your code here & return value
+  const clone = Array.from(nums);
+  const absClone = clone.forEach((element) => Math.abs(element));
+  const sum = absClone.reduce((a, b) => a + b, 0);
+  return sum;
 }
 
 /**

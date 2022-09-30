@@ -60,11 +60,11 @@ function createFirstFivePrimes() {
  * ? must use a for loop
  */
 function createSizedArray(size) {
-  // create loop
-  // the loop starts with array=[]
-  // every time it loops, it adds an element starting with 0 += 1 to the end
-  // maybe use array.push(loop number)
-  // return an array
+  const arr = [];
+  for (let i = 0; i < size; i += 1) {
+    arr.push(i);
+  }
+  return arr;
 }
 
 /**

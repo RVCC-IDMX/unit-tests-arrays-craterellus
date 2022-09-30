@@ -79,7 +79,8 @@ function splitTheString(str, separator) {
  * @returns {string} - the string with all the letters in uppercase
  */
 function makeAllUpperCase(str) {
-  // write your code here & return value
+  const upper = str.toUpperCase();
+  return upper;
 }
 
 /**
@@ -88,7 +89,8 @@ function makeAllUpperCase(str) {
  * @returns {string} - the string with all the letters lowercase
  */
 function makeAllLowerCase(str) {
-  // write your code here & return value
+  const lowcase = str.toLowerCase();
+  return lowcase;
 }
 
 /**
@@ -100,7 +102,10 @@ function makeAllLowerCase(str) {
  * ? ex: 'HELLO' => 'Hello'
  */
 function makeWordTitleCase(word) {
-  // write your code here & return value
+  const sliced = word.slice(1, 10);
+  const lowercases = sliced.toLowerCase();
+  const titleCase = word[0].toUpperCase() + lowercases;
+  return titleCase;
 }
 
 /**
@@ -112,7 +117,8 @@ function makeWordTitleCase(word) {
  * ? ex: 'hello world', 'hello', 'hi' => 'hi world'
  */
 function replaceTheString(str, oldStr, newStr) {
-  // write your code here & return value
+  const replaced = str.replace(oldStr, newStr);
+  return replaced;
 }
 
 /**
@@ -124,7 +130,12 @@ function replaceTheString(str, oldStr, newStr) {
  * ? hint: use split() and makeWordTitleCase()
  */
 function makeSentenceTitleCase(sentence) {
-  // write your code here & return value
+  const arr = sentence.split(' ');
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  }
+  const str2 = arr.join(' ');
+  return str2;
 }
 
 module.exports = {
